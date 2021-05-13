@@ -4,19 +4,165 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/12bool-responsive.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify Web</title>
 </head>
 <body>
     <div class="container-fluid">
-        <main>
-            <nav class="col-xs-1 col-sm-2">
+        <main class="clearfix">
+            <nav class="fl">
+                <div class="nav-logo-big">
+                    <img src="./img/logo.svg" alt="logo-big">
+                </div>
 
+                <div class="nav-logo-small">
+                    <img src="./img/logo-small.svg" alt="logo-small">
+                </div>
             </nav>
 
-            <div class="content">
+            <div class="content content-resize fl">
+                <div class="top-bar">
+                    <div class="top-bar-button">EFFETTUA L'UPGRADE</div>
+                </div>
 
+                <div class="main-content">
+                    <ul class="row">
+                        <li>IN EVIDENZA<br><hr></li>
+                        <li>PODCAST <br> <hr></li>
+                        <li>CLASSIFICHE <br> <hr></li>
+                        <li>GENERI E MOOD <br> <hr></li>
+                        <li>NUOVE USCITE <br> <hr></li>
+                        <li>SCOPRI <br> <hr></li>
+                    </ul>
+
+                    <section class="section-1">
+                        <h2>Recently Played</h2>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/metal_lifting.jpg" alt="heavy metal">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+
+                                <h3 class="playlist-title">Heavy Metal</h3>
+
+                                <div class="playlist-subtitle">Subtitle</div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/stranger.jpeg" alt="stranger things">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            
+                                <h3 class="playlist-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
+                            
+                                <div class="playlist-subtitle">Kyle Dixon & Michael Stein</div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/aquietplace.jpeg" alt="a quiet place">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            
+                                <h3 class="playlist-title">A quiet place</h3>
+                            
+                                <div class="playlist-subtitle">Subtitle</div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/split.jpeg" alt="split">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            
+                                <h3 class="playlist-title">Split</h3>
+                            
+                                <div class="playlist-subtitle">Subtitle</div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/cure.jpeg" alt="a cure for wellness">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            
+                                <h3 class="playlist-title">A cure for wellness</h3>
+                            
+                                <div class="playlist-subtitle">Subtitle</div>
+                            </div>
+
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/sinister.jpeg" alt="sinister">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                            
+                                <h3 class="playlist-title">Sinister</h3>
+                            
+                                <div class="playlist-subtitle">Subtitle</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section-2">
+                        <h2>Creato per John Doe</h2>
+
+                        <div class="section-subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/radar.jpeg" alt="radar">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                        
+                                <h3 class="playlist-title">Release Radar</h3>
+                            </div>
+                        
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/mixdaily.jpeg" alt="daily mix">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                        
+                                <h3 class="playlist-title">Daily Mix 1</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section-3">
+                        <h2>Artisti più popolari</h2>
+                    
+                        <div class="section-subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</div>
+                    
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/youg.jpeg" alt="lana del rey">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                    
+                                <h3 class="playlist-title">Lana Del Rey</h3>
+                            </div>
+                    
+                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2 album">
+                                <div class="main-content-image">
+                                    <img src="./img/einaudi.jpeg" alt="einaudi">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                    
+                                <h3 class="playlist-title">Ludovico Einaudi</h3>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
     
