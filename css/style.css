@@ -6,6 +6,16 @@ ul {
     list-style: none;
 }
 
+li {
+    color: grey;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+li:hover {
+    color: white;
+}
+
 .clearfix::after {
     content: "";
     display: table;
@@ -24,15 +34,16 @@ main > nav {
     width: 260px;
     height: calc(100vh - 90px);
     background-color: black;
+    position: relative;
 }
 
 .nav-logo-big {
     height: 90px;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 
 .nav-logo-big > img {
-    width: 180px;
+    width: 150px;
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
@@ -40,6 +51,118 @@ main > nav {
 
 .nav-logo-small {
     display: none;
+}
+
+.top-navbar-list {
+    margin-left: 20px;
+}
+
+.top-navbar-list > li {
+    /* padding-left: 20px; */
+    height: 35px;
+    line-height: 35px;
+}
+
+.top-navbar-list li:hover {
+    border-left: 3px solid lime;
+    margin-left: -20px;
+    padding-left: 17px;
+}
+
+.top-navbar-list img {
+    width: 25px;
+    vertical-align: middle;
+    filter: invert(50%);
+    margin-right: 5px;
+}
+
+.top-navbar-list li:hover img {
+    filter: invert(0%);
+}
+
+.my-playlists {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.my-playlists > h4 {
+    color: white;
+}
+
+.my-playlists li {
+    margin-top: 15px;
+}
+
+.my-playlists li:first-child {
+    margin-top: 10px;
+}
+
+.add-playlist {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.my-playlists li:hover .add-playlist {
+    background-color: white;
+}
+
+.lower-navbar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0 15px 5px 20px;
+}
+
+.lower-navbar img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.lower-navbar-cta {
+    color: grey;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.lower-navbar-cta:hover {
+    color: white;
+}
+
+.lower-navbar-cta > img {
+    width: 18px;
+    filter: invert(50%);
+}
+
+.lower-navbar-cta:hover img {
+    filter: invert(0%);
+}
+
+.lower-navbar > hr {
+    margin: 10px 0 15px 0;
+    border: none;
+    border-top: 1px solid grey;
+}
+
+.profile img {
+    width: 25px;
+    height: 25px;
+    background-color: grey;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.profile {
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 @media screen and (max-width: 576px) {
@@ -52,7 +175,7 @@ main > nav {
     }
 
     .nav-logo-small {
-        display: contents;
+        display: block;
         width: 48px;
         margin: 0;
     }
@@ -60,6 +183,36 @@ main > nav {
     .nav-logo-small > img {
         width: 32px;
         margin: 5px 8px;
+    }
+
+    .top-navbar-list, .lower-navbar {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .top-navbar-list img, .lower-navbar img {
+        margin: 0;
+    }
+
+    .top-navbar-list span:last-child, .lower-navbar span:last-child {
+        display: none;
+    }
+
+    .my-playlists {
+        display: none;
+    }
+
+    .profile {
+        margin-top: 15px;
+    }
+
+    .lower-navbar {
+        margin-bottom: 5px;
+    }
+
+    .lower-navbar hr {
+        display: none;
     }
 }
 
@@ -81,7 +234,8 @@ main > nav {
     color: white;
     background-color: rgba(0, 0, 0, 0);
     width: 260px;
-    font-size: 17px;
+    font-size: 14px;
+    font-weight: 500;
     text-align: center;
     border: 1px solid white;
     border-radius: 30px;
@@ -91,8 +245,12 @@ main > nav {
     right: 15px;
     transform: translate(0, -50%);
 }
+
 .top-bar-button:hover {
-    font-size: 18px;
+    font-size: 15px;
+    padding: 12px 20px;
+    width: 270px;
+    right: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -114,26 +272,23 @@ main > nav {
     padding: 0 15px 0 30px;
 }
 
-ul {
+.main-content > ul {
     justify-content: center;
     max-width: 750px;
     margin: auto;
 }
 
-li {
+.main-content li {
     margin: 30px 10px;
-    font-size: 13px;
-    color: grey;
-    font-weight: 600;
 }
 
-hr {
+.main-content hr {
     width: 30px;
     margin: 3px auto;
     border: none;
 }
 
-li:hover hr {
+.main-content li:hover hr {
     border-top: 2px solid lime;
     margin-bottom: -2px;
 }
@@ -176,7 +331,7 @@ li:hover hr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    visibility: hidden;
+    display: none;
 }
 
 .album:hover img {
@@ -184,7 +339,7 @@ li:hover hr {
 }
 
 .album:hover .fa-play-circle {
-    visibility: visible;
+    display: block;
 }
 
 [class^="playlist-"] {
@@ -200,6 +355,8 @@ li:hover hr {
 }
 
 footer {
+    width: 100%;
     height: 90px;
+    position: fixed;
     background-color: #282828;
 }
