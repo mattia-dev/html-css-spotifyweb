@@ -114,10 +114,12 @@ main > nav {
 }
 
 .lower-navbar {
+    z-index: 1001;
+    background-color: black;
     width: 100%;
     position: absolute;
     bottom: 0;
-    padding: 0 15px 5px 20px;
+    padding: 5px 15px 5px 20px;
 }
 
 .lower-navbar img {
@@ -363,15 +365,15 @@ footer {
 }
 
 .footer-left, .footer-right {
-    min-width: 260px;
+    flex-basis: 260px;
     display: flex;
     align-items: center;   
     justify-content: space-between;
-    padding: 0 5px;
+    padding: 0 8px;
 }
 
 .footer-center {
-    max-width: 500px;
+    flex-basis: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -381,7 +383,6 @@ footer {
 
 .song-content {
     display: flex;
-    width: 55%;
 }
 
 .footer-left .song-image {
@@ -401,7 +402,7 @@ footer {
 
 .song-title {
     color: grey;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 500;
 }
 
@@ -413,7 +414,6 @@ footer {
 .song-tools {
     color: grey;
     display: flex;
-    width: 45%;
     justify-content: flex-end;
 }
 
@@ -431,7 +431,12 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
+    .song-content {
+        margin-right: 5px;
+    }
+
     .song-tools {
+        flex-grow: 1;
         flex-direction: column;
         align-items: center;
     }
@@ -443,11 +448,7 @@ footer {
 
 @media only screen and (max-width: 576px) {
     .song-content {
-        width: 45%;
-    }
-
-    .song-tools {
-        width: 55%;
+        margin-right: 20px;
     }
 
     .footer-left .song-image {
@@ -477,7 +478,7 @@ footer {
 }
 
 .lower-content {
-    width: 100%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
