@@ -2,6 +2,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+main {
+    height: calc(100vh - 90px);
+}
+
 ul {
     list-style: none;
 }
@@ -26,13 +30,9 @@ li:hover {
     float: left;
 }
 
-main {
-    height: 100%;
-}
-
 .sidebar {
     width: 260px;
-    height: calc(100vh - 90px);
+    height: 100%;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -88,6 +88,7 @@ main {
 }
 
 .my-playlists ul {
+    margin-top: 15px;
     height: 60%;
     flex-grow: 1;
     overflow-y: auto;
@@ -107,6 +108,10 @@ main {
 
 .my-playlists li {
     margin-top: 15px;
+}
+
+.my-playlists li:first-child {
+    margin-top: 0;
 }
 
 .squared-plus {
@@ -181,7 +186,7 @@ main {
 }
 
 @media screen and (max-width: 576px) {
-    main > nav {
+    .sidebar {
         width: 48px;
     }
 
@@ -233,7 +238,7 @@ main {
 
 .content {
     width: calc(100% - 260px);
-    height: calc(100vh - 90px);
+    height: 100%;
     background-color: #141922;
 }
 
